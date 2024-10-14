@@ -4,6 +4,7 @@ import { GoHomeFill } from "react-icons/go";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
+import { MdAccountCircle } from "react-icons/md";
 
 const Navbar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -44,6 +45,12 @@ const Navbar = () => {
 					<Button onClick={toggleColorMode}>
 						{colorMode === "light" ? <IoMoon /> : <LuSun size='20' />}
 					</Button>
+					<Link to={"/auth/"}>
+						<Button>
+							<MdAccountCircle fontSize={20} />
+						</Button>
+					</Link>
+					
 				</HStack>
 			</Flex>
 		</Container>
